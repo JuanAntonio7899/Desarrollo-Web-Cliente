@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+</head>
+<body>
+    <script>
+        function countBy(x, y) {
+  
+  if (x <= 0 || y <= 0) {
+    return [];
+  }
+  
+  
+  let multiplos = [ ];
+  
+  
+  for (let i = 0; i < y; i++) {
+    multiplos[i] = x * (i + 1);
+  }
+  
+  return multiplos;
+}
+
+
+console.log(countBy(3, 5));   
+console.log(countBy(-3, 5));  
+    </script>
+</body>
+</html>
