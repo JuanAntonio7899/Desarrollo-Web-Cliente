@@ -1,6 +1,12 @@
 function parrafillo() {
 
     let parr = document.getElementsByTagName("p")[0];
-    parr.setAttribute("class","dos");
+    if (parr.className == "uno") {
+        parr.setAttribute("class","dos");
+        
+    } else {
+        parr.setAttribute("class","uno");
+    }
+   
     
 }
