@@ -40,13 +40,20 @@ window.onload = function () {
 
         let papi = document.querySelector("section");
 
-        let victimas = document.querySelectorAll("div");
+      /*  let victimas = document.querySelectorAll("div");
         //
         let hijos = papi.children;
         for (let i = 0; i < victimas.length; i++) {
             let papi = victimas[i].parentNode;
             papi.removeChild(victimas[i]);
             
-        }
+        }*/
+
+            while (papi.firstChild) {
+                papi.removeChild(papi.firstChild);
+                console.log("borrando ");                 
+                
+                
+            }
     }
 }

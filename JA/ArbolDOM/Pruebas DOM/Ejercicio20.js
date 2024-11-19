@@ -14,4 +14,9 @@ window.onload = function(){
 
     }
 
-}
+
+    boton2.onclick = function(){
+        
+    }
+
+} 
