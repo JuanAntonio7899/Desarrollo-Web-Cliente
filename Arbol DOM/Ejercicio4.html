@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería de Fotos</title>
+  <style>
+    .gallery-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    img {
+      width: 400px;
+      height: 300px;
+      border: 2px solid black;
+      margin-bottom: 20px;
+    }
+
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+
+    .disabled {
+      background-color: grey;
+      cursor: not-allowed;
+    }
+  </style>
+
+<script src="Ejercicio4.js"></script>
+<body>
+
+  <div class="gallery-container">
+    <!-- Imagen mostrada -->
+    <img id="gallery-image" src="image1.jpg" alt="Galería de Fotos">
+
+    <!-- Botones para avanzar y retroceder -->
+    <button id="prev-btn">Retroceder</button>
+    <button id="next-btn">Avanzar</button>
+  </div>
+
+ 
+
+</body>
+</html>

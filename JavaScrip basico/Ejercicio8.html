@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+</head>
+<body>
+    <script>
+        function countBy(x, y) {
+  // Verificamos si alguno de los números es negativo o cero
+  if (x <= 0 || y <= 0) {
+    return [];
+  }
+  
+  // Inicializamos un array vacío
+  let multiplos = [];
+  
+  // Llenamos el array con los Y primeros múltiplos de X
+  for (let i = 0; i < y; i++) {
+    multiplos[i] = x * (i + 1);
+  }
+  
+  return multiples;
+}
+
+// Ejemplo 
+console.log(countBy(3, 5));  
+console.log(countBy(0, 5));  
+console.log(countBy(-3, 5)); 
+
+    </script>
+</body>
+</html>

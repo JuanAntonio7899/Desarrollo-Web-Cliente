@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos en HTML</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    section {
+      background-color: lightblue;
+      padding: 20px;
+      border: 2px solid darkblue;
+      margin: 20px;
+    }
+    p {
+      background-color: lightgray;
+      padding: 10px;
+      border: 1px solid gray;
+      width: 80%;
+    }
+    a {
+      color: darkblue;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <p>
+      Este es un párrafo con un <a href="https://campus.example.com" id="campus-link">enlace al campus</a>.
+    </p>
+  </section>
+
+  <script>
+    // Elementos
+    const section = document.querySelector('section');
+    const paragraph = document.querySelector('p');
+    const link = document.getElementById('campus-link');
+
+    // Función para cambiar el color de fondo del section
+    function changeSectionBgColor(event) {
+      section.style.backgroundColor = section.style.backgroundColor === 'lightblue' ? 'lightcoral' : 'lightblue';
+    }
+
+    // Función para cambiar la anchura del párrafo
+    function changeParagraphWidth(event) {
+      paragraph.style.width = paragraph.style.width === '80%' ? '100%' : '80%';
+    }
+
+    // Función para mostrar un confirm antes de ir al enlace
+    function handleLinkClick(event) {
+      const userConfirmed = confirm('¿Quieres ir al campus del instituto?');
+      if (!userConfirmed) {
+        event.preventDefault(); // Evitar la navegación si el usuario no confirma
+      }
+    }
+
+    // Asignar eventos
+    section.addEventListener('click', changeSectionBgColor, true); // Captura
+    // section.addEventListener('click', changeSectionBgColor, false); // Burbuja
+
+    paragraph.addEventListener('click', changeParagraphWidth, true); // Captura
+    paragraph.addEventListener('click', changeParagraphWidth, false); // Burbuja
+
+    link.addEventListener('click', handleLinkClick, true); // Captura
+    link.addEventListener('click', handleLinkClick, false); // Burbuja
+  </script>
+</body>
+</html>
