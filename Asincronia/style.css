@@ -1,0 +1,110 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Título principal */
+h1 {
+    font-size: 3em;
+    color: #ffcc00;
+    text-shadow: 2px 2px 10px rgba(255, 204, 0, 0.8);
+    margin: 20px 0;
+}
+
+/* Contenedor principal de la información del personaje */
+.contenedor-personaje {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Sección del personaje */
+.personaje {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 204, 0, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.3);
+}
+
+.personaje h2 {
+    font-size: 2.2em;
+    color: #ffcc00;
+    margin-bottom: 10px;
+}
+
+.personaje img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #ffcc00;
+    margin-bottom: 15px;
+}
+
+.personaje p {
+    font-size: 1.2em;
+    color: #ddd;
+    max-width: 500px;
+}
+
+/* Sección del planeta */
+.planeta {
+    background: rgba(0, 153, 255, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0px 4px 10px rgba(0, 153, 255, 0.3);
+}
+
+.planeta h2 {
+    font-size: 2em;
+    color: #0099ff;
+}
+
+.planeta img {
+    width: 180px;
+    border-radius: 10px;
+    border: 3px solid #0099ff;
+    margin-top: 10px;
+}
+
+/* Sección de transformaciones */
+.transformaciones {
+    background: rgba(255, 102, 0, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0px 4px 10px rgba(255, 102, 0, 0.3);
+}
+
+.transformaciones h2 {
+    font-size: 2em;
+    color: #ff6600;
+}
+
+.transformaciones p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ff6600;
+    margin: 5px 0;
+}
+
+.transformaciones img {
+    width: 150px;
+    border-radius: 10px;
+    border: 2px solid #ff6600;
+    margin: 5px 0;
+}

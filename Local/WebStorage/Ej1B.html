@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Datos</title>
+</head>
+<body>
+    <h2>Datos Guardados</h2>
+    <p><strong>Nombre:</strong> <span id="nombre"></span></p>
+    <p><strong>Clave:</strong> <span id="clave"></span></p>
+    <button onclick="borrarDatos()">Borrar Datos</button>
+
+    <script>
+        document.getElementById("nombre").textContent = localStorage.getItem("nombre") || "No hay datos";
+        document.getElementById("clave").textContent = localStorage.getItem("clave") || "No hay datos";
+
+        function borrarDatos() {
+            localStorage.clear();
+            alert("Datos borrados");
+            location.reload();
+        }
+    </script>
+</body>
+</html>

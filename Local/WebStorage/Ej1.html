@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario WebStorage</title>
+</head>
+<body>
+    <h2>Formulario de Registro</h2>
+    <form id="formulario">
+        <label>Nombre:</label>
+        <input type="text" id="nombre" required><br>
+        <label>Clave:</label>
+        <input type="password" id="clave" required><br>
+        <button type="submit">Guardar</button>
+    </form>
+
+    <script>
+        document.getElementById("formulario").addEventListener("submit", function(event) {
+            event.preventDefault();
+            localStorage.setItem("nombre", document.getElementById("nombre").value);
+            localStorage.setItem("clave", document.getElementById("clave").value);
+            alert("Datos guardados en localStorage.");
+        });
+    </script>
+</body>
+</html>

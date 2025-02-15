@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h2>Iniciar Sesión</h2>
+    <form id="loginForm">
+        <input type="text" id="usuario" placeholder="Usuario" required><br>
+        <input type="password" id="password" placeholder="Contraseña" required><br>
+        <button type="submit">Guardar</button>
+        <button type="button" onclick="borrar()">Borrar</button>
+    </form>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const usuario = document.getElementById("usuario").value;
+            const password = document.getElementById("password").value;
+            localStorage.setItem("login", JSON.stringify({ usuario, password }));
+            alert("Datos guardados.");
+        });
+
+        function borrar() {
+            localStorage.removeItem("login");
+        }
+    </script>
+</body>
+</html>
